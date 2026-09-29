@@ -258,6 +258,26 @@ summary::after{content:"+";font:500 1.2rem/1 var(--mono);color:var(--accent)}
 details[open] summary::after{content:"–"}
 details p{padding-bottom:16px;color:var(--muted)}
 
+/* Mobile live status dock */
+.dock{position:fixed;inset-inline:0;bottom:0;z-index:20;background:var(--surface);border-top:1px solid var(--line);box-shadow:0 -6px 24px color-mix(in srgb,var(--ink) 12%,transparent);
+  padding:8px 12px calc(8px + env(safe-area-inset-bottom,0px));display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) auto;gap:6px;
+  transform:translateY(110%);transition:transform .25s ease;visibility:hidden}
+.dock.show{transform:none;visibility:visible}
+.dock button{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:6px 8px;cursor:pointer;display:grid;gap:2px;justify-items:start;text-align:start;min-width:0}
+.dock .dn{font-size:.72rem;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.dock .ds{font-size:.8rem;font-weight:600;display:inline-flex;align-items:center;gap:5px;white-space:nowrap;max-width:100%;overflow:hidden}
+.dock .ds::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor;flex:none}
+.dock .d-eligible{color:var(--good)} .dock .d-possible{color:var(--gold)} .dock .d-notyet{color:var(--warn)} .dock .d-blocked{color:var(--bad)} .dock .d-na{color:var(--muted)}
+.dock button.on-eligible{border-color:color-mix(in srgb,var(--good) 55%,var(--line));background:color-mix(in srgb,var(--good) 9%,var(--bg))}
+.dock button.on-possible{border-color:color-mix(in srgb,var(--gold) 55%,var(--line))}
+.dock .dscore{justify-items:center;background:var(--ink);color:var(--bg);border-color:var(--ink);padding-inline:12px}
+.dock .dscore b{font:600 1.15rem/1 var(--display);font-variant-numeric:tabular-nums;direction:ltr;unicode-bidi:isolate}
+.dock .dscore span{font-size:.68rem;opacity:.8;white-space:nowrap}
+@keyframes bump{0%{transform:scale(1)}40%{transform:scale(1.07)}100%{transform:scale(1)}}
+.dock .bump{animation:bump .35s ease}
+.result,.tr{scroll-margin-top:72px}
+@media (min-width:901px){ .dock{display:none} }
+@media (max-width:900px){ #form{padding-bottom:12px} }
 footer{padding-block:40px 56px;border-top:1px solid var(--line);font-size:.88rem;color:var(--muted)}
 footer .wrap{display:grid;gap:14px}
 footer ul{margin:0;padding-inline-start:18px;display:grid;gap:4px}
@@ -431,6 +451,12 @@ footer ul{margin:0;padding-inline-start:18px;display:grid;gap:4px}
           <p class="fine"><span class="en">An estimate from published rules. Your promotions committee makes the decision.</span><span class="ar">تقدير مبني على القواعد المعلنة. القرار للجنة الترقيات في جهتك.</span></p>
         </div>
       </aside>
+      <div class="dock" id="dock" aria-live="polite">
+        <button type="button" data-go="0"><span class="dn"></span><span class="ds"></span></button>
+        <button type="button" data-go="1"><span class="dn"></span><span class="ds"></span></button>
+        <button type="button" data-go="2"><span class="dn"></span><span class="ds"></span></button>
+        <button type="button" class="dscore" data-go="r"><b id="dScore"></b><span class="en">score · details</span><span class="ar">الدرجة · التفاصيل</span></button>
+      </div>
     </div>
   </div>
 </section>
@@ -719,6 +745,18 @@ footer ul{margin:0;padding-inline-start:18px;display:grid;gap:4px}
     $('tracksOut').innerHTML = tracks.map(t => `<div class="tr"><div class="tr-head"><h3>${t.name}</h3><span class="pill s-${t.status}">${t.label}</span></div><ul>${t.lines.map(l => `<li>${l}</li>`).join('')}</ul></div>`).join('');
 
     // verdict + round
+    const short = {eligible:L('Eligible','مؤهل'), possible:L('Possible','ممكن'), notyet:L('Not yet','ليس بعد'), blocked:L('Blocked','ممنوع'), na: !s.permanent ? L('Not covered','غير مشمول') : L('N/A','لا ينطبق')};
+    const names = [L('Fast','السريع'), L('Flexible','المرن'), L('Special','الخاص')];
+    document.querySelectorAll('#dock button[data-go]:not(.dscore)').forEach((b, i) => {
+      const st = tracks[i].status;
+      b.querySelector('.dn').textContent = names[i];
+      const ds = b.querySelector('.ds'); ds.className = 'ds d-' + st; ds.textContent = short[st];
+      b.className = 'on-' + st;
+      b.setAttribute('aria-label', tracks[i].name + ': ' + short[st]);
+      if (b.dataset.prev && b.dataset.prev !== st){ b.classList.remove('bump'); void b.offsetWidth; b.classList.add('bump'); }
+      b.dataset.prev = st;
+    });
+    $('dScore').textContent = fmt(total);
     const fast = tracks[0].status, flex = tracks[1].status, spec = tracks[2].status;
     let v;
     if (!s.permanent) v = L("The new system doesn't cover your post.",'المنظومة الجديدة لا تشمل وظيفتك.');
@@ -800,6 +838,19 @@ footer ul{margin:0;padding-inline-start:18px;display:grid;gap:4px}
   $('form').addEventListener('change', render);
   $('form').addEventListener('submit', e => e.preventDefault());
   document.querySelectorAll('.seg button').forEach(b => b.addEventListener('click', () => setCount(+b.dataset.count)));
+  // Dock: visible while editing the form, hidden once the full result is on screen
+  document.querySelectorAll('#dock button').forEach(b => b.addEventListener('click', () => {
+    const g = b.dataset.go;
+    const el = g === 'r' ? document.querySelector('.result') : document.querySelectorAll('#tracksOut .tr')[+g];
+    if (el) el.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start'});
+  }));
+  if ('IntersectionObserver' in window){
+    let formIn = false, resIn = false;
+    const dock = $('dock');
+    const sync = () => dock.classList.toggle('show', formIn && !resIn);
+    new IntersectionObserver(e => { formIn = e[0].isIntersecting; sync(); }, {rootMargin:'0px 0px -80px 0px'}).observe($('form'));
+    new IntersectionObserver(e => { resIn = e[0].isIntersecting; sync(); }, {threshold:0.25}).observe(document.querySelector('.result .score'));
+  }
   $('resetBtn').addEventListener('click', applySample);
   $('themeBtn').addEventListener('click', toggleTheme);
   $('langBtn').addEventListener('click', () => setLang(lang === 'ar' ? 'en' : 'ar'));
