@@ -1,0 +1,810 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-lang="ar" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>دليل الترقية | Promotion Pathfinder</title>
+<meta name="description" content="دليل تفاعلي لمنظومة الترقيات الجديدة للموظفين العُمانيين المدنيين 2026: المسارات والشروط وحاسبة الأهلية.">
+<meta property="og:title" content="دليل الترقية">
+<meta property="og:description" content="اعرف أهليتك للترقية وفق المنظومة الجديدة 2026 في الجهاز الإداري للدولة.">
+<meta name="theme-color" content="#0B6477">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Crect x='1' y='17' width='8' height='8' rx='1.5' fill='%23B9CBC7'/%3E%3Crect x='9' y='9' width='8' height='16' rx='1.5' fill='%237FA3A9'/%3E%3Crect x='17' y='1' width='8' height='24' rx='1.5' fill='%230B6477'/%3E%3C/svg%3E">
+<script>
+(function(){var r=document.documentElement;try{var l=localStorage.getItem('pp-lang');if(l==='en'){r.removeAttribute('data-lang');r.dir='ltr';r.lang='en';}var t=localStorage.getItem('pp-theme');if(t==='dark'||t==='light')r.dataset.theme=t;}catch(e){}})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Readex+Pro:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: a grade staircase. Hero states the rule change, then a two-pane checker (inputs | live verdict), then the rulebook in scannable blocks. */
+:root{
+  --bg:#F1F4F3; --surface:#FFFFFF; --surface-2:#E4EBE9; --ink:#12242B; --muted:#55686E; --line:#D0DBD8;
+  --accent:#0B6477; --accent-ink:#FFFFFF; --gold:#B07F22;
+  --good:#1D7A45; --warn:#A35F00; --bad:#B3261E;
+  --display:"Readex Pro","IBM Plex Sans Arabic",system-ui,sans-serif;
+  --body:"IBM Plex Sans","IBM Plex Sans Arabic",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --body-ar:"IBM Plex Sans Arabic","Readex Pro",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --r:10px; color-scheme:light;
+}
+:root[data-theme="dark"]{
+  --bg:#0D1719; --surface:#142124; --surface-2:#1B2C30; --ink:#E4EDEB; --muted:#95A7AA; --line:#2A3C40;
+  --accent:#52B6C7; --accent-ink:#05262C; --gold:#DDAA4B;
+  --good:#4FC482; --warn:#E3A544; --bad:#F27B70; color-scheme:dark }
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;min-height:100vh;overflow-x:hidden}
+img,svg{max-width:100%}
+[hidden]{display:none!important}
+section,.hero{scroll-margin-top:64px}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *{transition:none!important;animation:none!important} }
+body{background:var(--bg);color:var(--ink);font:15px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+html[data-lang="ar"] body{font-family:var(--body-ar);font-size:16px;line-height:1.75}
+html:not([data-lang="ar"]) .ar{display:none!important}
+html[data-lang="ar"] .en{display:none!important}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.15;letter-spacing:-.01em}
+h2{font-size:clamp(1.5rem,1.2rem + 1.2vw,2.1rem);font-weight:600}
+h3{font-size:1.1rem;font-weight:600}
+p{margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:20px}
+.eyebrow{font:500 .72rem/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+html[data-lang="ar"] .eyebrow{font-family:var(--body-ar);letter-spacing:0;font-size:.85rem}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+/* Header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:16px;padding-block:10px}
+.brand{display:flex;align-items:center;gap:10px;font:600 1rem/1 var(--display);white-space:nowrap}
+.brand svg{flex:none}
+.nav{display:flex;gap:4px;margin-inline-start:auto;overflow-x:auto;scrollbar-width:none}
+.nav a{color:var(--muted);text-decoration:none;font-size:.85rem;padding:6px 10px;border-radius:999px;white-space:nowrap}
+.nav a:hover{background:var(--surface-2);color:var(--ink)}
+.tools{display:flex;gap:6px;flex:none}
+.icon-btn{flex:none;width:34px;height:34px;display:grid;place-items:center;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;cursor:pointer;padding:0}
+.icon-btn:hover{border-color:var(--accent)}
+.icon-btn .i-sun{display:none}
+:root[data-theme="dark"] .icon-btn .i-sun{display:block}
+:root[data-theme="dark"] .icon-btn .i-moon{display:none}
+.lang{flex:none;height:34px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:6px 12px;font:600 .85rem/1 var(--body-ar);cursor:pointer}
+.lang:hover{border-color:var(--accent)}
+@media (max-width:760px){ .nav{display:none} .tools{margin-inline-start:auto} }
+@media (max-width:480px){
+  .wrap{padding-inline:16px}
+  .brand{font-size:.95rem}
+  section{padding-block:40px}
+  .fact b{font-size:1.1rem}
+  .fact{padding-inline:0 12px}
+  .fact+.fact{padding-inline-start:12px}
+  fieldset{padding:14px}
+  .res-top,.score,.moves{padding:16px}
+  .tr{padding:14px 16px}
+  .big{font-size:2.2rem}
+  .cap{grid-template-columns:60px 1fr 56px;gap:8px}
+  .track,.panel{padding:18px}
+  .cta .btn{flex:1 1 auto;justify-content:center}
+}
+.row-head{flex-wrap:wrap}
+input[type=range]{height:28px}
+output,.big,#perfV,#compV,.cap .num,.cap .v,td.num{direction:ltr;unicode-bidi:isolate}
+
+/* Hero */
+.hero{padding-block:56px 36px}
+.hero .wrap{display:grid;grid-template-columns:1.25fr .9fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(2.2rem,1.4rem + 3.6vw,4rem);font-weight:700;margin-block:14px 18px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.lead{font-size:1.08rem;color:var(--muted);max-width:60ch}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:999px;font-weight:600;text-decoration:none;border:1px solid transparent}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{border-color:var(--line);color:var(--ink);background:var(--surface)}
+.btn:hover{filter:brightness(1.06)}
+.ladder{width:100%;max-width:420px;justify-self:end}
+[dir="rtl"] .ladder svg{transform:scaleX(-1)}
+.ladder svg{display:block;width:100%;height:auto}
+.st{fill:var(--surface-2)} .st-top{fill:var(--line)}
+.p-flex{stroke:var(--accent);fill:none;stroke-width:3.5;stroke-linejoin:round}
+.p-fast{stroke:var(--gold);fill:none;stroke-width:4;stroke-linecap:round}
+.p-spec{stroke:var(--muted);fill:none;stroke-width:2.5;stroke-dasharray:2 7;stroke-linecap:round}
+.dot-flex{fill:var(--accent)} .dot-fast{fill:var(--gold)} .dot-spec{fill:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:10px;font-size:.82rem;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:18px;height:3px;border-radius:2px;display:inline-block}
+@media (max-width:820px){ .hero .wrap{grid-template-columns:1fr} .ladder{justify-self:start;max-width:340px} .hero{padding-block:36px 24px} }
+
+/* Facts */
+.facts{display:grid;grid-template-columns:repeat(4,1fr);border-block:1px solid var(--line)}
+.fact{padding-block:18px;padding-inline:0 18px;display:grid;gap:4px;min-width:0}
+.fact+.fact{padding-inline-start:18px;border-inline-start:1px solid var(--line)}
+.fact b{font:600 1.35rem/1.2 var(--display)}
+.fact span{color:var(--muted);font-size:.86rem}
+@media (max-width:760px){ .facts{grid-template-columns:1fr 1fr} .fact:nth-child(3){border-inline-start:0;padding-inline-start:0} .fact:nth-child(n+3){border-top:1px solid var(--line)} }
+
+section{padding-block:56px}
+.sec-head{display:grid;gap:10px;margin-bottom:26px;max-width:68ch}
+.sec-head p{color:var(--muted)}
+
+/* Checker */
+#check{background:var(--surface);border-block:1px solid var(--line)}
+.checker{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:start}
+@media (max-width:900px){ .checker{grid-template-columns:1fr} }
+.inputs{display:grid;gap:18px;min-width:0}
+fieldset{border:1px solid var(--line);border-radius:var(--r);padding:18px;margin:0;display:grid;gap:16px;background:var(--bg);min-width:0}
+legend.fl{font:600 .95rem/1 var(--display);padding-inline:6px}
+.row{display:grid;gap:6px}
+.row-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.row-head label{font-weight:500}
+output{font:500 .95rem/1 var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+input[type=range]{width:100%;accent-color:var(--accent);margin:0;height:22px}
+.hint{font-size:.82rem;color:var(--muted)}
+.check{display:flex;gap:10px;align-items:flex-start;cursor:pointer}
+.check input{accent-color:var(--accent);width:18px;height:18px;margin-top:3px;flex:none}
+select{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 10px;width:100%}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--surface)}
+.seg button{border:0;background:transparent;color:var(--ink);font:500 .88rem/1 var(--mono);padding:8px 14px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
+.rep{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;align-items:center}
+.rep .row-head{grid-column:1/-1}
+.chip{display:inline-block;font-size:.74rem;font-weight:600;padding:3px 8px;border-radius:999px;white-space:nowrap}
+.c-exc{background:color-mix(in srgb,var(--good) 16%,transparent);color:var(--good)}
+.c-vg,.c-good{background:color-mix(in srgb,var(--accent) 14%,transparent);color:var(--accent)}
+.c-acc{background:color-mix(in srgb,var(--warn) 16%,transparent);color:var(--warn)}
+.c-weak{background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad)}
+.sample{display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-size:.85rem;color:var(--muted)}
+.sample button{font:inherit;color:var(--accent);background:none;border:0;padding:0;text-decoration:underline;cursor:pointer}
+
+.result{position:sticky;top:calc(env(safe-area-inset-top,0px) + 72px);border:1px solid var(--line);border-radius:14px;background:var(--surface);overflow:hidden;min-width:0}
+@media (max-width:900px){ .result{position:static} }
+.res-top{padding:20px;background:var(--ink);color:var(--bg);display:grid;gap:14px}
+.res-top .eyebrow{color:color-mix(in srgb,var(--bg) 70%,transparent)}
+.verdict{font:600 1.3rem/1.25 var(--display)}
+.round{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.88rem;color:color-mix(in srgb,var(--bg) 82%,transparent)}
+.round b{color:var(--bg);font-weight:600}
+.score{padding:20px;border-bottom:1px solid var(--line);display:grid;gap:10px}
+.score-line{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.big{font:600 2.6rem/1 var(--display);font-variant-numeric:tabular-nums}
+.big small{font-size:1rem;color:var(--muted);font-weight:500}
+.bar{position:relative;height:14px;border-radius:999px;background:var(--surface-2);overflow:hidden;display:flex}
+.bar i{display:block;height:100%;transition:width .35s ease}
+.bar .b-perf{background:var(--accent)} .bar .b-comp{background:var(--gold)}
+.bar::after{content:"";position:absolute;inset-block:0;inset-inline-start:75%;width:2px;background:var(--surface)}
+.split{display:flex;justify-content:space-between;gap:10px;font-size:.82rem;color:var(--muted);flex-wrap:wrap}
+.split span{display:inline-flex;gap:6px;align-items:center}
+.split i{width:10px;height:10px;border-radius:3px;display:inline-block}
+.tracks-out{display:grid}
+.tr{padding:16px 20px;border-bottom:1px solid var(--line);display:grid;gap:6px}
+.tr-head{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.tr-head h3{font-size:1rem}
+.tr ul{margin:0;padding-inline-start:18px;color:var(--muted);font-size:.88rem;display:grid;gap:2px}
+.pill{font-size:.75rem;font-weight:600;padding:4px 10px;border-radius:999px;white-space:nowrap;display:inline-flex;align-items:center;gap:6px}
+.pill::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.s-eligible{background:color-mix(in srgb,var(--good) 15%,transparent);color:var(--good)}
+.s-possible{background:color-mix(in srgb,var(--gold) 18%,transparent);color:var(--gold)}
+.s-notyet{background:color-mix(in srgb,var(--warn) 15%,transparent);color:var(--warn)}
+.s-blocked{background:color-mix(in srgb,var(--bad) 14%,transparent);color:var(--bad)}
+.s-na{background:var(--surface-2);color:var(--muted)}
+.moves{padding:18px 20px 20px;display:grid;gap:10px;background:color-mix(in srgb,var(--accent) 6%,var(--surface))}
+.moves ol{margin:0;padding-inline-start:20px;display:grid;gap:8px;font-size:.92rem}
+.moves li::marker{font-family:var(--mono);color:var(--accent)}
+.fine{font-size:.78rem;color:var(--muted)}
+
+/* Tracks */
+.track-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:860px){ .track-grid{grid-template-columns:1fr} }
+.track{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;display:grid;gap:12px;align-content:start;min-width:0}
+.track-top{display:flex;align-items:center;gap:10px}
+.swatch{width:28px;height:28px;border-radius:8px;display:grid;place-items:center;flex:none}
+.track h3{font-size:1.2rem}
+.track .sub{color:var(--muted);font-size:.9rem}
+.track ul{margin:0;padding:0;list-style:none;display:grid;gap:8px;font-size:.92rem}
+.track li{display:grid;grid-template-columns:18px 1fr;gap:8px}
+.track li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--muted);margin-top:.6em;justify-self:center}
+.note{margin-top:16px;padding:14px 16px;border-radius:var(--r);background:var(--surface-2);font-size:.92rem}
+
+/* Scoring */
+.score-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:20px}
+@media (max-width:860px){ .score-grid{grid-template-columns:1fr} }
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;display:grid;gap:16px;align-content:start;min-width:0}
+.formula{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-family:var(--mono);font-size:.95rem}
+.formula .term{padding:8px 12px;border-radius:8px;background:var(--surface-2)}
+.formula .t-perf{box-shadow:inset 0 -3px 0 var(--accent)} .formula .t-comp{box-shadow:inset 0 -3px 0 var(--gold)}
+.formula .op{color:var(--muted)}
+.tbl-wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.9rem}
+th,td{text-align:start;padding:9px 10px;border-bottom:1px solid var(--line)}
+th{font-weight:600;color:var(--muted);font-size:.78rem;text-transform:uppercase;letter-spacing:.06em}
+html[data-lang="ar"] th{text-transform:none;letter-spacing:0;font-size:.85rem}
+td.num{white-space:nowrap}
+.ok{color:var(--good);font-weight:600} .no{color:var(--muted)}
+.caps{display:grid;gap:10px}
+.cap{display:grid;grid-template-columns:86px 1fr 70px;gap:10px;align-items:center;font-size:.88rem}
+.cap-bar{height:12px;background:var(--surface-2);border-radius:999px;overflow:hidden}
+.cap-bar i{display:block;height:100%;background:var(--gold);border-radius:999px}
+.cap .v{text-align:end}
+
+/* Barriers */
+.bar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--surface)}
+@media (max-width:860px){ .bar-grid{grid-template-columns:1fr 1fr} }
+@media (max-width:520px){ .bar-grid{grid-template-columns:1fr} }
+.barrier{padding:18px 20px;display:grid;gap:6px;border-bottom:1px solid var(--line);border-inline-end:1px solid var(--line);align-content:start}
+.barrier .wait{font:600 1.15rem/1.2 var(--display);color:var(--bad)}
+.barrier p{color:var(--muted);font-size:.9rem}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+@media (max-width:860px){ .how{grid-template-columns:1fr} }
+.how .panel{gap:8px}
+.how p{color:var(--muted);font-size:.92rem}
+.eq{font-family:var(--mono);font-size:.85rem;background:var(--surface-2);padding:10px 12px;border-radius:8px;overflow-x:auto;white-space:nowrap;direction:ltr;text-align:left}
+
+/* Playbook */
+#playbook{background:var(--surface);border-block:1px solid var(--line)}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0;counter-reset:s}
+.steps li{counter-increment:s;padding-block:20px;display:grid;gap:8px;align-content:start;border-top:2px solid var(--line);position:relative}
+.steps li::before{content:counter(s,decimal-leading-zero);font:500 .8rem/1 var(--mono);color:var(--accent)}
+.steps li::after{content:"";position:absolute;top:-2px;inset-inline-start:0;width:36px;height:2px;background:var(--accent)}
+.steps li{padding-inline-end:24px}
+.steps h3{font-size:1.02rem}
+.steps p{color:var(--muted);font-size:.9rem}
+.disclaim{margin-top:18px;font-size:.84rem;color:var(--muted)}
+
+/* FAQ */
+.faq{display:grid;gap:10px;max-width:820px}
+details{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:0 18px}
+summary{cursor:pointer;padding-block:16px;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font:500 1.2rem/1 var(--mono);color:var(--accent)}
+details[open] summary::after{content:"–"}
+details p{padding-bottom:16px;color:var(--muted)}
+
+footer{padding-block:40px 56px;border-top:1px solid var(--line);font-size:.88rem;color:var(--muted)}
+footer .wrap{display:grid;gap:14px}
+footer ul{margin:0;padding-inline-start:18px;display:grid;gap:4px}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="17" width="8" height="8" rx="1.5" fill="var(--surface-2)"/><rect x="9" y="9" width="8" height="16" rx="1.5" fill="var(--line)"/><rect x="17" y="1" width="8" height="24" rx="1.5" fill="var(--accent)"/></svg>
+      <span class="en">Promotion Pathfinder</span><span class="ar">دليل الترقية</span>
+    </div>
+    <nav class="nav" aria-label="Sections">
+      <a href="#check"><span class="en">Check</span><span class="ar">تحقق</span></a>
+      <a href="#tracks"><span class="en">Tracks</span><span class="ar">المسارات</span></a>
+      <a href="#scoring"><span class="en">Scoring</span><span class="ar">الدرجات</span></a>
+      <a href="#barriers"><span class="en">Barriers</span><span class="ar">الموانع</span></a>
+      <a href="#playbook"><span class="en">Playbook</span><span class="ar">خطة العمل</span></a>
+      <a href="#faq"><span class="en">FAQ</span><span class="ar">أسئلة</span></a>
+    </nav>
+    <div class="tools">
+      <button class="icon-btn" id="themeBtn" type="button" aria-label="الوضع الداكن">
+        <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <button class="lang" id="langBtn" type="button" aria-label="Switch language">English</button>
+    </div>
+  </div>
+</header>
+
+<main>
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow"><span class="en">Civil service · Ministry of Labour · 2026</span><span class="ar">الخدمة المدنية · وزارة العمل · 2026</span></p>
+      <h1><span class="en">Promotion now follows <em>performance</em>.</span><span class="ar">الترقية الآن تتبع <em>الأداء</em>.</span></h1>
+      <p class="lead"><span class="en">From 2026, Omani civil employees in the State Administrative Apparatus are promoted through three tracks tied to their Ejada ratings. Seniority on its own no longer moves you up. Check where you stand, then plan your next step.</span><span class="ar">ابتداءً من عام 2026، تتم ترقية الموظفين العُمانيين المدنيين في وحدات الجهاز الإداري للدولة عبر ثلاثة مسارات مرتبطة بتقييماتهم في منظومة إجادة. الأقدمية وحدها لم تعد كافية للترقية. اعرف موقعك، ثم خطط لخطوتك التالية.</span></p>
+      <div class="cta">
+        <a class="btn primary" href="#check"><span class="en">Check my eligibility</span><span class="ar">تحقق من أهليتي</span></a>
+        <a class="btn ghost" href="#tracks"><span class="en">Read the rules</span><span class="ar">اقرأ القواعد</span></a>
+      </div>
+    </div>
+    <div class="ladder" aria-hidden="true">
+      <svg viewBox="0 0 364 250">
+        <rect class="st" x="20" y="196" width="54" height="40" rx="3"/>
+        <rect class="st" x="74" y="162" width="54" height="74" rx="3"/>
+        <rect class="st" x="128" y="128" width="54" height="108" rx="3"/>
+        <rect class="st" x="182" y="94" width="54" height="142" rx="3"/>
+        <rect class="st" x="236" y="60" width="54" height="176" rx="3"/>
+        <rect class="st-top" x="290" y="26" width="54" height="210" rx="3"/>
+        <path class="p-flex" d="M26 186 H74 V152 H128 V118 H182 V84 H236 V50 H290 V16 H338"/>
+        <path class="p-spec" d="M34 160 C 100 70, 210 40, 322 34"/>
+        <path class="p-fast" d="M40 200 C 140 196, 210 70, 318 22"/>
+        <circle class="dot-flex" cx="338" cy="16" r="6"/>
+        <circle class="dot-fast" cx="318" cy="22" r="6"/>
+        <circle class="dot-spec" cx="322" cy="34" r="4"/>
+      </svg>
+      <div class="legend">
+        <span><i style="background:var(--gold)"></i><span class="en">Fast track</span><span class="ar">المسار السريع</span></span>
+        <span><i style="background:var(--accent)"></i><span class="en">Flexible track</span><span class="ar">المسار المرن</span></span>
+        <span><i style="background:var(--muted)"></i><span class="en">Special track</span><span class="ar">المسار الخاص</span></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="facts">
+    <div class="fact"><b><span class="en">RO 10M</span><span class="ar">10 ملايين ر.ع</span></b><span><span class="en">2026 promotion budget, shared by eligible headcount</span><span class="ar">ميزانية ترقيات 2026، توزع حسب عدد المستوفين</span></span></div>
+    <div class="fact"><b><span class="en">2 Jan · 2 Jul</span><span class="ar">2 يناير · 2 يوليو</span></b><span><span class="en">Two promotion dates each year</span><span class="ar">موعدان للترقية كل عام</span></span></div>
+    <div class="fact"><b><span class="en">3 years</span><span class="ar">3 سنوات</span></b><span><span class="en">Minimum time in your current grade</span><span class="ar">الحد الأدنى في الدرجة الحالية</span></span></div>
+    <div class="fact"><b><span class="en">3 tracks</span><span class="ar">3 مسارات</span></b><span><span class="en">Fast, flexible and special</span><span class="ar">السريع والمرن والخاص</span></span></div>
+  </div>
+</div>
+
+<section id="check" style="margin-top:48px">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow"><span class="en">Eligibility check</span><span class="ar">فحص الأهلية</span></p>
+      <h2><span class="en">Where do I stand?</span><span class="ar">أين أقف؟</span></h2>
+      <p><span class="en">Enter your own record and the verdict updates as you go. Everything stays in your browser.</span><span class="ar">أدخل بيانات سجلك وستتحدث النتيجة مباشرة. تبقى كل البيانات في متصفحك.</span></p>
+      <p class="sample"><span class="en">A sample profile is loaded as an example.</span><span class="ar">تم تحميل ملف مثال للتوضيح.</span> <button type="button" id="resetBtn"><span class="en">Reset to sample</span><span class="ar">إعادة المثال</span></button></p>
+    </div>
+
+    <div class="checker">
+      <form class="inputs" id="form" autocomplete="off">
+        <fieldset>
+          <legend class="fl"><span class="en">Your post</span><span class="ar">وظيفتك</span></legend>
+          <label class="check"><input type="checkbox" id="permanent" checked><span><span class="en">I hold a permanent post (not temporary, contract or a special regime)</span><span class="ar">أشغل وظيفة دائمة (لست مؤقتاً أو بعقد أو على نظام خاص)</span></span></label>
+          <div class="row">
+            <div class="row-head"><label for="years"><span class="en">Years in current grade</span><span class="ar">سنوات في الدرجة الحالية</span></label><output id="yearsOut" for="years"></output></div>
+            <input type="range" id="years" min="0" max="10" step="0.5" value="4">
+          </div>
+          <label class="check"><input type="checkbox" id="ceiling"><span><span class="en">I have reached the last grade of my job's career scale</span><span class="ar">وصلت إلى نهاية التدرج الوظيفي لوظيفتي</span></span></label>
+          <label class="check"><input type="checkbox" id="critical"><span><span class="en">My role needs rare or critical expertise</span><span class="ar">وظيفتي تتطلب خبرة نادرة أو حرجة</span></span></label>
+        </fieldset>
+
+        <fieldset>
+          <legend class="fl"><span class="en">Your Ejada reports</span><span class="ar">تقاريرك في إجادة</span></legend>
+          <div class="row-head">
+            <span><span class="en">Annual reports on record</span><span class="ar">عدد التقارير السنوية</span></span>
+            <div class="seg" role="group" aria-label="Number of reports">
+              <button type="button" data-count="3" aria-pressed="true">3</button>
+              <button type="button" data-count="4" aria-pressed="false">4</button>
+              <button type="button" data-count="5" aria-pressed="false">5</button>
+            </div>
+          </div>
+          <div id="reps" style="display:grid;gap:14px">
+            <div class="rep" data-i="0"><div class="row-head"><label for="rep0">2025 <span class="en">(latest)</span><span class="ar">(الأحدث)</span></label><span><output id="rep0Out" for="rep0"></output> <span class="chip" id="rep0Chip"></span></span></div><input type="range" id="rep0" min="0" max="100" step="1" value="93"></div>
+            <div class="rep" data-i="1"><div class="row-head"><label for="rep1">2024</label><span><output id="rep1Out" for="rep1"></output> <span class="chip" id="rep1Chip"></span></span></div><input type="range" id="rep1" min="0" max="100" step="1" value="91"></div>
+            <div class="rep" data-i="2"><div class="row-head"><label for="rep2">2023</label><span><output id="rep2Out" for="rep2"></output> <span class="chip" id="rep2Chip"></span></span></div><input type="range" id="rep2" min="0" max="100" step="1" value="86"></div>
+            <div class="rep" data-i="3" hidden><div class="row-head"><label for="rep3">2022</label><span><output id="rep3Out" for="rep3"></output> <span class="chip" id="rep3Chip"></span></span></div><input type="range" id="rep3" min="0" max="100" step="1" value="84"></div>
+            <div class="rep" data-i="4" hidden><div class="row-head"><label for="rep4">2021</label><span><output id="rep4Out" for="rep4"></output> <span class="chip" id="rep4Chip"></span></span></div><input type="range" id="rep4" min="0" max="100" step="1" value="80"></div>
+          </div>
+          <p class="hint"><span class="en">Use the percentage on each annual report. Your top three count toward the score. A Weak latest report (below 55%) bars promotion.</span><span class="ar">استخدم النسبة المئوية في كل تقرير سنوي. تُحتسب أعلى ثلاثة تقارير في الدرجة. التقدير "ضعيف" في آخر تقرير (أقل من 55%) يمنع الترقية.</span></p>
+        </fieldset>
+
+        <fieldset>
+          <legend class="fl"><span class="en">Competency (your estimate)</span><span class="ar">الكفاءة الفردية (تقديرك)</span></legend>
+          <div class="row">
+            <div class="row-head"><label for="ready"><span class="en">Readiness for a higher post</span><span class="ar">الاستعداد لتولي وظيفة أعلى</span></label><output id="readyOut" for="ready"></output></div>
+            <input type="range" id="ready" min="0" max="12.5" step="0.5" value="10">
+          </div>
+          <div class="row">
+            <div class="row-head"><label for="skills"><span class="en">Skills development</span><span class="ar">تطور المهارات</span></label><output id="skillsOut" for="skills"></output></div>
+            <input type="range" id="skills" min="0" max="12.5" step="0.5" value="9.5">
+          </div>
+          <p class="hint"><span class="en">Your unit's promotions committee sets these two scores. Only 10% of candidates can get 20 or more of the 25 points, so estimate realistically.</span><span class="ar">تحدد لجنة الترقيات في جهتك هاتين الدرجتين. لا يحصل على 20 درجة فأكثر من 25 إلا 10% من المرشحين، لذا كن واقعياً في التقدير.</span></p>
+        </fieldset>
+
+        <fieldset>
+          <legend class="fl"><span class="en">Your record</span><span class="ar">سجلك</span></legend>
+          <label class="check"><input type="checkbox" id="barrier"><span><span class="en">I am currently suspended, in custody, or under a disciplinary or criminal investigation</span><span class="ar">أنا حالياً موقوف عن العمل أو محبوس أو قيد تحقيق تأديبي أو جزائي</span></span></label>
+          <div class="row">
+            <label for="penalty"><span class="en">Salary-deduction penalty</span><span class="ar">جزاء الخصم من الراتب</span></label>
+            <select id="penalty">
+              <option value="0" data-en="None" data-ar="لا يوجد">None</option>
+              <option value="6" data-en="More than 5 and up to 15 days" data-ar="أكثر من 5 أيام حتى 15 يوماً">More than 5 and up to 15 days</option>
+              <option value="9" data-en="More than 15 days" data-ar="أكثر من 15 يوماً">More than 15 days</option>
+            </select>
+          </div>
+          <div class="row" id="sinceRow" hidden>
+            <div class="row-head"><label for="since"><span class="en">Months since the penalty</span><span class="ar">الأشهر منذ الجزاء</span></label><output id="sinceOut" for="since"></output></div>
+            <input type="range" id="since" min="0" max="12" step="1" value="2">
+          </div>
+        </fieldset>
+      </form>
+
+      <aside class="result" aria-live="polite">
+        <div class="res-top">
+          <p class="eyebrow"><span class="en">Your result</span><span class="ar">نتيجتك</span></p>
+          <p class="verdict" id="verdict"></p>
+          <div class="round" id="round"></div>
+        </div>
+        <div class="score">
+          <div class="score-line">
+            <span><span class="en">Flexible-track score</span><span class="ar">درجة المسار المرن</span></span>
+            <span class="big" id="total"></span>
+          </div>
+          <div class="bar" role="img" id="scoreBar"><i class="b-perf" id="bPerf"></i><i class="b-comp" id="bComp"></i></div>
+          <div class="split">
+            <span><i style="background:var(--accent)"></i><span class="en">Performance</span><span class="ar">الأداء</span> <b class="num" id="perfV"></b></span>
+            <span><i style="background:var(--gold)"></i><span class="en">Competency</span><span class="ar">الكفاءة</span> <b class="num" id="compV"></b></span>
+          </div>
+          <p class="fine" id="bandNote"></p>
+        </div>
+        <div class="tracks-out" id="tracksOut"></div>
+        <div class="moves">
+          <p class="eyebrow"><span class="en">Your next moves</span><span class="ar">خطواتك التالية</span></p>
+          <ol id="moves"></ol>
+          <p class="fine"><span class="en">An estimate from published rules. Your promotions committee makes the decision.</span><span class="ar">تقدير مبني على القواعد المعلنة. القرار للجنة الترقيات في جهتك.</span></p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="tracks">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow"><span class="en">The three tracks</span><span class="ar">المسارات الثلاثة</span></p>
+      <h2><span class="en">Three ways up, one set of gates</span><span class="ar">ثلاثة طرق للترقية، وشروط مشتركة</span></h2>
+      <p><span class="en">Every track needs at least three years in your current grade, a clean record, and room left on your career scale.</span><span class="ar">كل المسارات تتطلب ثلاث سنوات على الأقل في الدرجة الحالية، وسجلاً خالياً من الموانع، وألا تكون قد بلغت نهاية التدرج الوظيفي.</span></p>
+    </div>
+    <div class="track-grid">
+      <article class="track">
+        <div class="track-top"><span class="swatch" style="background:color-mix(in srgb,var(--gold) 22%,transparent)"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 12 L12 2 M6 2 H12 V8" stroke="var(--gold)" stroke-width="2" fill="none" stroke-linecap="round"/></svg></span><h3><span class="en">Fast track</span><span class="ar">المسار السريع</span></h3></div>
+        <p class="sub"><span class="en">Rewards exceptional performance</span><span class="ar">لمكافأة الأداء الاستثنائي</span></p>
+        <ul>
+          <li><span><span class="en">3+ years in your current grade</span><span class="ar">3 سنوات فأكثر في الدرجة الحالية</span></span></li>
+          <li><span><span class="en">3 Ejada ratings of Excellent (90% and above)</span><span class="ar">3 تقييمات بتقدير "ممتاز" في إجادة (90% فأكثر)</span></span></li>
+          <li><span><span class="en">Funded first, before the flexible track</span><span class="ar">يُموَّل أولاً قبل المسار المرن</span></span></li>
+        </ul>
+      </article>
+      <article class="track">
+        <div class="track-top"><span class="swatch" style="background:color-mix(in srgb,var(--accent) 18%,transparent)"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 12 H5 V8 H9 V4 H13" stroke="var(--accent)" stroke-width="2" fill="none" stroke-linejoin="round"/></svg></span><h3><span class="en">Flexible track</span><span class="ar">المسار المرن</span></h3></div>
+        <p class="sub"><span class="en">Competitive selection by points</span><span class="ar">مفاضلة تنافسية بالنقاط</span></p>
+        <ul>
+          <li><span><span class="en">3+ years in your current grade</span><span class="ar">3 سنوات فأكثر في الدرجة الحالية</span></span></li>
+          <li><span><span class="en">3 reports rated Good (70%) or higher</span><span class="ar">3 تقارير بتقدير "جيد" (70%) فأعلى</span></span></li>
+          <li><span><span class="en">Ranked out of 100 and promoted in order while the unit's budget lasts</span><span class="ar">ترتيب المرشحين من 100 درجة، والترقية حسب الترتيب في حدود ميزانية الجهة</span></span></li>
+        </ul>
+      </article>
+      <article class="track">
+        <div class="track-top"><span class="swatch" style="background:var(--surface-2)"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1 L8.8 5.2 L13 7 L8.8 8.8 L7 13 L5.2 8.8 L1 7 L5.2 5.2 Z" fill="var(--muted)"/></svg></span><h3><span class="en">Special track</span><span class="ar">المسار الخاص</span></h3></div>
+        <p class="sub"><span class="en">Retains and attracts scarce talent</span><span class="ar">لاستبقاء الكفاءات النادرة واستقطابها</span></p>
+        <ul>
+          <li><span><span class="en">For critical roles that need rare expertise</span><span class="ar">للوظائف الحرجة التي تتطلب خبرات نادرة</span></span></li>
+          <li><span><span class="en">At the discretion of the head of the unit</span><span class="ar">بتقدير رئيس الوحدة</span></span></li>
+          <li><span><span class="en">Capped at 1% of the promotions budget</span><span class="ar">لا يتجاوز 1% من الميزانية المرصودة</span></span></li>
+        </ul>
+      </article>
+    </div>
+    <p class="note"><span class="en">No track can promote you past the last grade of your job's career scale under the job classification system.</span><span class="ar">لا يجوز في أي مسار أن تتجاوز الترقية نهاية التدرج الوظيفي وفق نظام تصنيف وترتيب الوظائف.</span></p>
+  </div>
+</section>
+
+<section id="scoring" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow"><span class="en">How the flexible track scores you</span><span class="ar">كيف تُحسب درجات المسار المرن</span></p>
+      <h2><span class="en">100 points: 75 from Ejada, 25 from competency</span><span class="ar">100 درجة: 75 من إجادة و25 من الكفاءة</span></h2>
+    </div>
+    <div class="score-grid">
+      <div class="panel">
+        <div class="formula" dir="ltr">
+          <span class="term t-perf">0.75 × avg(top 3 Ejada %)</span><span class="op">+</span>
+          <span class="term t-comp">readiness ≤ 12.5</span><span class="op">+</span>
+          <span class="term t-comp">skills ≤ 12.5</span>
+        </div>
+        <p><span class="en">Example: reports of 93%, 91% and 86% average 90%, which gives 67.5 performance points. Every 4 points you add to your Ejada average adds 3 points to your score.</span><span class="ar">مثال: تقارير بنسب 93% و91% و86% متوسطها 90%، أي 67.5 درجة للأداء. كل 4 نقاط تضيفها إلى متوسطك في إجادة تضيف 3 درجات إلى مجموعك.</span></p>
+        <div class="tbl-wrap">
+          <table>
+            <thead><tr><th><span class="en">Ejada rating</span><span class="ar">تقدير إجادة</span></th><th><span class="en">Range</span><span class="ar">النطاق</span></th><th><span class="en">Fast</span><span class="ar">السريع</span></th><th><span class="en">Flexible</span><span class="ar">المرن</span></th></tr></thead>
+            <tbody>
+              <tr><td><span class="chip c-exc"><span class="en">Excellent</span><span class="ar">ممتاز</span></span></td><td class="num">90–100%</td><td class="ok">✓</td><td class="ok">✓</td></tr>
+              <tr><td><span class="chip c-vg"><span class="en">Very good</span><span class="ar">جيد جداً</span></span></td><td class="num">80–89%</td><td class="no">–</td><td class="ok">✓</td></tr>
+              <tr><td><span class="chip c-good"><span class="en">Good</span><span class="ar">جيد</span></span></td><td class="num">70–79%</td><td class="no">–</td><td class="ok">✓</td></tr>
+              <tr><td><span class="chip c-acc"><span class="en">Acceptable</span><span class="ar">مقبول</span></span></td><td class="num">55–69%</td><td class="no">–</td><td class="no">–</td></tr>
+              <tr><td><span class="chip c-weak"><span class="en">Weak</span><span class="ar">ضعيف</span></span></td><td class="num">&lt; 55%</td><td class="no" colspan="2"><span class="en">Bars promotion if it is your final rating</span><span class="ar">يمنع الترقية إذا كان التقدير الأخير</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="fine"><span class="en">Rating bands from Ministerial Decision 36/2023 (job performance measurement system).</span><span class="ar">نطاقات التقدير وفق القرار الوزاري رقم 36/2023 بإصدار نظام قياس كفاية الأداء الوظيفي.</span></p>
+      </div>
+      <div class="panel">
+        <h3><span class="en">Competency points have a quota</span><span class="ar">درجات الكفاءة لها سقف</span></h3>
+        <p style="color:var(--muted);font-size:.92rem"><span class="en">Managers can't give everyone top marks. In each unit, the 25 competency points must fit this spread across candidates.</span><span class="ar">لا يمكن للمسؤولين منح الجميع الدرجات العليا. في كل جهة، يجب أن يلتزم توزيع درجات الكفاءة (25 درجة) على المرشحين بهذه النسب.</span></p>
+        <div class="caps">
+          <div class="cap"><span class="num">20–25</span><span class="cap-bar"><i style="width:20%"></i></span><span class="v num">≤ 10%</span></div>
+          <div class="cap"><span class="num">15–19</span><span class="cap-bar"><i style="width:70%"></i></span><span class="v num">≤ 35%</span></div>
+          <div class="cap"><span class="num">10–14</span><span class="cap-bar"><i style="width:100%"></i></span><span class="v num">≤ 50%</span></div>
+          <div class="cap"><span class="num">1–9</span><span class="cap-bar"><i style="width:10%"></i></span><span class="v num">5%</span></div>
+        </div>
+        <p class="fine"><span class="en">Points band on the left, share of candidates on the right. Readiness for a higher post and skills development are worth up to 12.5 points each.</span><span class="ar">نطاق الدرجات على اليمين، ونسبة المرشحين على اليسار. الاستعداد لتولي وظيفة أعلى وتطور المهارات لكل منهما 12.5 درجة كحد أقصى.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="barriers" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow"><span class="en">What stops a promotion</span><span class="ar">موانع الترقية</span></p>
+      <h2><span class="en">Barriers and waiting periods</span><span class="ar">الموانع وفترات الانتظار</span></h2>
+    </div>
+    <div class="bar-grid">
+      <div class="barrier"><span class="wait"><span class="en">While serving</span><span class="ar">طوال المدة</span></span><h3><span class="en">Imprisonment</span><span class="ar">السجن</span></h3><p><span class="en">No promotion during a prison term.</span><span class="ar">لا تجوز ترقية الموظف خلال مدة سجنه.</span></p></div>
+      <div class="barrier"><span class="wait"><span class="en">On hold</span><span class="ar">موقوفة</span></span><h3><span class="en">Suspension or investigation</span><span class="ar">الإيقاف أو التحقيق</span></h3><p><span class="en">Suspension from work, or a pending disciplinary or criminal case, holds promotion.</span><span class="ar">الإيقاف عن العمل أو إحالة الموظف إلى تحقيق تأديبي أو محاكمة جزائية يوقف الترقية.</span></p></div>
+      <div class="barrier"><span class="wait num">6 <span class="en">months</span><span class="ar">أشهر</span></span><h3><span class="en">Deduction of 6–15 days</span><span class="ar">خصم من 6 إلى 15 يوماً</span></h3><p><span class="en">A salary deduction of more than 5 and up to 15 days.</span><span class="ar">الخصم من الراتب لمدة تزيد على خمسة أيام إلى خمسة عشر يوماً.</span></p></div>
+      <div class="barrier"><span class="wait num">9 <span class="en">months</span><span class="ar">أشهر</span></span><h3><span class="en">Deduction over 15 days</span><span class="ar">خصم أكثر من 15 يوماً</span></h3><p><span class="en">A salary deduction of more than 15 days.</span><span class="ar">الخصم من الراتب لمدة تزيد على خمسة عشر يوماً.</span></p></div>
+      <div class="barrier"><span class="wait"><span class="en">Not eligible</span><span class="ar">غير مؤهل</span></span><h3><span class="en">Weak final rating</span><span class="ar">تقدير ضعيف أخير</span></h3><p><span class="en">A final Ejada rating of Weak rules you out.</span><span class="ar">حصول الموظف على تقدير "ضعيف" في آخر تقييم يمنع ترقيته.</span></p></div>
+      <div class="barrier"><span class="wait"><span class="en">No next grade</span><span class="ar">لا درجة تالية</span></span><h3><span class="en">Top of career scale</span><span class="ar">نهاية التدرج الوظيفي</span></h3><p><span class="en">You can't be promoted past the end of your job's scale.</span><span class="ar">لا تتجاوز الترقية نهاية التدرج الوظيفي.</span></p></div>
+    </div>
+
+    <div class="how">
+      <div class="panel">
+        <h3><span class="en">When promotions happen</span><span class="ar">متى تصدر الترقيات</span></h3>
+        <p><span class="en">Decisions are issued twice a year and take effect on 2 January and 2 July.</span><span class="ar">تصدر القرارات مرتين في السنة، وتسري في 2 يناير و2 يوليو.</span></p>
+      </div>
+      <div class="panel">
+        <h3><span class="en">How the money is split</span><span class="ar">كيف توزع الميزانية</span></h3>
+        <p><span class="en">Each unit gets a share of the RO 10 million in proportion to how many of its employees meet the requirements.</span><span class="ar">تحصل كل جهة على حصة من 10 ملايين ريال بنسبة عدد موظفيها المستوفين لشروط الترقية.</span></p>
+        <div class="eq">unit share = (eligible in unit ÷ eligible in all units) × RO 10,000,000</div>
+      </div>
+      <div class="panel">
+        <h3><span class="en">Who decides, and appeals</span><span class="ar">من يقرر، والتظلم</span></h3>
+        <p><span class="en">Each unit has a promotions committee of at least 3 members, chaired at Director General level or above, working in an e-system linked to Ejada. Unit committees hear grievances, and a Ministry of Labour committee oversees them.</span><span class="ar">لكل جهة لجنة ترقيات لا يقل أعضاؤها عن 3، يرأسها موظف بدرجة مدير عام فأعلى، وتعمل عبر نظام إلكتروني مرتبط بإجادة. تنظر لجان في كل وحدة في التظلمات وتبت فيها، إضافة إلى لجنة بوزارة العمل.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="playbook">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow"><span class="en">Playbook</span><span class="ar">خطة العمل</span></p>
+      <h2><span class="en">How to get yourself promoted</span><span class="ar">كيف تصل إلى الترقية</span></h2>
+      <p><span class="en">The order follows one Ejada cycle, from setting goals to the promotion date.</span><span class="ar">الخطوات مرتبة وفق دورة إجادة الواحدة، من تحديد الأهداف حتى موعد الترقية.</span></p>
+    </div>
+    <ol class="steps">
+      <li><h3><span class="en">Set objectives you can measure</span><span class="ar">حدد أهدافاً قابلة للقياس</span></h3><p><span class="en">Agree your Ejada objectives and key results with your manager at the start of the cycle, tied to your section's plan. Vague goals are hard to rate Excellent.</span><span class="ar">اتفق مع مسؤولك على أهدافك ونتائجك الرئيسية في إجادة في بداية الدورة، مرتبطة بخطة قسمك. الأهداف المبهمة يصعب أن تنال تقدير "ممتاز".</span></p></li>
+      <li><h3><span class="en">Log evidence as you go</span><span class="ar">وثّق إنجازاتك أولاً بأول</span></h3><p><span class="en">Keep deliverables, figures and commendations, and attach them to your key results. Don't rebuild the year from memory in December.</span><span class="ar">احتفظ بالمخرجات والأرقام وخطابات الشكر، وأرفقها بنتائجك الرئيسية. لا تنتظر نهاية العام لتتذكر ما أنجزته.</span></p></li>
+      <li><h3><span class="en">Check in before the final rating</span><span class="ar">راجع أداءك قبل التقييم النهائي</span></h3><p><span class="en">Ask your manager where you stand mid-cycle and close the gaps early. The fast track needs three ratings of 90% or more.</span><span class="ar">اسأل مسؤولك عن مستواك في منتصف الدورة وعالج الفجوات مبكراً. المسار السريع يتطلب ثلاثة تقييمات بنسبة 90% فأكثر.</span></p></li>
+      <li><h3><span class="en">Grow into the next grade</span><span class="ar">استعد للدرجة التالية</span></h3><p><span class="en">Take on duties of the higher post and finish relevant training. That is what the 25 competency points measure.</span><span class="ar">تحمّل مهام الوظيفة الأعلى وأكمل التدريب المرتبط بها. هذا ما تقيسه درجات الكفاءة الخمس والعشرون.</span></p></li>
+      <li><h3><span class="en">Protect your record</span><span class="ar">حافظ على سجلك</span></h3><p><span class="en">One salary-deduction penalty can cost you 6 to 9 months, which may mean missing a whole round.</span><span class="ar">جزاء خصم واحد من الراتب قد يكلفك من 6 إلى 9 أشهر، أي قد تفوتك جولة ترقية كاملة.</span></p></li>
+      <li><h3><span class="en">Confirm your file before each round</span><span class="ar">تأكد من ملفك قبل كل جولة</span></h3><p><span class="en">Ahead of 2 January and 2 July, check with HR that your grade date and Ejada reports are correct in the system.</span><span class="ar">قبل 2 يناير و2 يوليو، تأكد مع الموارد البشرية من صحة تاريخ درجتك وتقارير إجادة في النظام.</span></p></li>
+      <li><h3><span class="en">Appeal if it looks wrong</span><span class="ar">تظلّم إذا رأيت خطأ</span></h3><p><span class="en">If you met the conditions and weren't promoted, file a grievance with your unit's committee and keep a copy of your evidence.</span><span class="ar">إذا استوفيت الشروط ولم تُرقَّ، قدّم تظلماً إلى لجنة جهتك واحتفظ بنسخة من مستنداتك.</span></p></li>
+    </ol>
+    <p class="disclaim"><span class="en">Practical advice based on how the rules work. It is not official Ministry guidance.</span><span class="ar">نصائح عملية مبنية على طريقة عمل القواعد، وليست إرشادات رسمية من الوزارة.</span></p>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow"><span class="en">Questions</span><span class="ar">أسئلة شائعة</span></p>
+      <h2><span class="en">Common questions</span><span class="ar">ما يسأل عنه الموظفون</span></h2>
+    </div>
+    <div class="faq">
+      <details><summary><span class="en">Does seniority still count?</span><span class="ar">هل ما زالت الأقدمية معتبرة؟</span></summary><p><span class="en">Only as a minimum. You need 3 years in your current grade, but after that your Ejada ratings and competency decide.</span><span class="ar">كحد أدنى فقط. تحتاج إلى 3 سنوات في درجتك الحالية، وبعدها تحسم تقييماتك في إجادة وكفاءتك الأمر.</span></p></details>
+      <details><summary><span class="en">Is the batch promotion system over?</span><span class="ar">هل انتهت الترقيات الجماعية؟</span></summary><p><span class="en">Yes. Earlier reports said the 2016 seniority batch would be the last promoted as a group. From 2026, promotions go through the new system.</span><span class="ar">نعم. أفادت تقارير سابقة بأن أقدمية دفعة 2016 آخر دفعة تُرقّى بالنظام الجماعي، ومنذ 2026 تتم الترقيات وفق المنظومة الجديدة.</span></p></details>
+      <details><summary><span class="en">Who is covered?</span><span class="ar">من تشمل المنظومة؟</span></summary><p><span class="en">Omani civil employees in permanent posts in State Administrative Apparatus units. Temporary, contract and special-regime posts are excluded. The private sector is not covered.</span><span class="ar">الموظفون العُمانيون المدنيون في الوظائف الدائمة بوحدات الجهاز الإداري للدولة. لا تشمل الوظائف المؤقتة أو بعقود أو ذات الأنظمة الخاصة، ولا القطاع الخاص.</span></p></details>
+      <details><summary><span class="en">I qualify. Am I guaranteed a promotion?</span><span class="ar">استوفيت الشروط، فهل الترقية مضمونة؟</span></summary><p><span class="en">Only on the fast track, which is funded first. On the flexible track, candidates are promoted in rank order while the unit's budget lasts.</span><span class="ar">في المسار السريع فقط، لأنه يُموَّل أولاً. في المسار المرن تتم الترقية حسب ترتيب المرشحين وفي حدود ميزانية الجهة.</span></p></details>
+      <details><summary><span class="en">Who sets my competency points?</span><span class="ar">من يحدد درجات كفاءتي؟</span></summary><p><span class="en">Your unit's promotions committee, within the quota shown in the scoring section.</span><span class="ar">لجنة الترقيات في جهتك، ضمن النسب الموضحة في قسم الدرجات.</span></p></details>
+      <details><summary><span class="en">What if I think the decision is wrong?</span><span class="ar">ماذا لو رأيت أن القرار خاطئ؟</span></summary><p><span class="en">File a grievance with your unit's grievance committee. A Ministry of Labour committee oversees the process.</span><span class="ar">قدّم تظلماً إلى لجنة التظلمات في جهتك، وتشرف لجنة بوزارة العمل على العملية.</span></p></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><span class="en">Based on the Ministry of Labour announcement reported on 28 September 2026. The official decision and your HR department have the final word. This page gives an estimate, not a decision.</span><span class="ar">مبني على إعلان وزارة العمل المنشور في 28 سبتمبر 2026. القرار الرسمي وإدارة الموارد البشرية في جهتك هما المرجع النهائي. هذه الصفحة تقدم تقديراً وليست قراراً.</span></p>
+    <ul>
+      <li><a href="https://www.omannews.gov.om/topics/ar/3/show/474175" target="_blank" rel="noopener">Oman News Agency</a></li>
+      <li><a href="https://www.omandaily.om/article/1211468" target="_blank" rel="noopener">Oman Daily</a></li>
+      <li><a href="https://www.muscatdaily.com/2026/09/28/ro10mn-promotion-fund-as-career-progression-for-govt-employees-revamped/" target="_blank" rel="noopener">Muscat Daily</a></li>
+      <li><a href="https://timesofoman.com/article/177444-omr-10-million-allocated-for-new-civil-service-promotions-scheme-in-oman" target="_blank" rel="noopener">Times of Oman</a></li>
+      <li><a href="https://qanoon.om/p/2023/mol20230036/" target="_blank" rel="noopener">Ministerial Decision 36/2023 (qanoon.om)</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const $ = id => document.getElementById(id);
+  const SAMPLE = {permanent:true, years:4, ceiling:false, critical:false, count:3, reps:[93,91,86,84,80], ready:10, skills:9.5, barrier:false, penalty:0, since:2};
+  let lang = 'en';
+  try { lang = localStorage.getItem('pp-lang') || 'ar'; } catch(e) {}
+  const L = (en, ar) => lang === 'ar' ? ar : en;
+  const fmt = n => (Math.round(n*10)/10).toString();
+  let count = 3;
+
+  function rating(p){
+    if (p >= 90) return ['exc', L('Excellent','ممتاز')];
+    if (p >= 80) return ['vg', L('Very good','جيد جداً')];
+    if (p >= 70) return ['good', L('Good','جيد')];
+    if (p >= 55) return ['acc', L('Acceptable','مقبول')];
+    return ['weak', L('Weak','ضعيف')];
+  }
+  function dateFmt(d){
+    return d.toLocaleDateString(lang === 'ar' ? 'ar-OM-u-nu-latn' : 'en-GB', {day:'numeric', month:'long', year:'numeric'});
+  }
+  function roundOnOrAfter(d){
+    const y = d.getFullYear();
+    const c = [new Date(y,0,2), new Date(y,6,2), new Date(y+1,0,2)];
+    return c.find(x => x >= d);
+  }
+  function addMonths(d, m){ const x = new Date(d); x.setMonth(x.getMonth() + m); return x; }
+  const months = n => L(n === 1 ? '1 month' : n + ' months', n === 1 ? 'شهر واحد' : n === 2 ? 'شهران' : n + (n <= 10 ? ' أشهر' : ' شهراً'));
+
+  function read(){
+    return {
+      permanent: $('permanent').checked,
+      years: +$('years').value,
+      ceiling: $('ceiling').checked,
+      critical: $('critical').checked,
+      reps: [0,1,2,3,4].slice(0, count).map(i => +$('rep'+i).value),
+      ready: +$('ready').value,
+      skills: +$('skills').value,
+      barrier: $('barrier').checked,
+      penalty: +$('penalty').value,
+      since: +$('since').value
+    };
+  }
+
+  function render(){
+    const s = read();
+    // readouts
+    $('yearsOut').textContent = fmt(s.years) + L(' yrs',' سنة');
+    $('readyOut').textContent = fmt(s.ready) + ' / 12.5';
+    $('skillsOut').textContent = fmt(s.skills) + ' / 12.5';
+    $('sinceOut').textContent = months(s.since);
+    $('sinceRow').hidden = s.penalty === 0;
+    for (let i = 0; i < 5; i++){
+      const v = +$('rep'+i).value, r = rating(v);
+      $('rep'+i+'Out').textContent = v + '%';
+      const chip = $('rep'+i+'Chip'); chip.className = 'chip c-' + r[0]; chip.textContent = r[1];
+    }
+    [...document.querySelectorAll('#penalty option')].forEach(o => o.textContent = o.dataset[lang]);
+
+    // scoring
+    const top = [...s.reps].sort((a,b) => b-a).slice(0,3);
+    const avg = top.reduce((a,b) => a+b, 0) / 3;
+    const perf = 0.75 * avg, comp = s.ready + s.skills, total = perf + comp;
+    const exc = s.reps.filter(r => r >= 90).length;
+    const goodPlus = s.reps.filter(r => r >= 70).length;
+    $('total').innerHTML = fmt(total) + ' <small>/ 100</small>';
+    $('bPerf').style.width = perf + '%';
+    $('bComp').style.width = comp + '%';
+    $('perfV').textContent = fmt(perf) + ' / 75';
+    $('compV').textContent = fmt(comp) + ' / 25';
+    $('scoreBar').setAttribute('aria-label', L('Score ','الدرجة ') + fmt(total) + ' / 100');
+    const band = comp >= 20 ? ['20–25','10%'] : comp >= 15 ? ['15–19','35%'] : comp >= 10 ? ['10–14','50%'] : ['1–9','5%'];
+    $('bandNote').textContent = L(
+      `Competency ${fmt(comp)} falls in the ${band[0]} band. At most ${band[1]} of your unit's candidates can be scored there.`,
+      `درجة الكفاءة ${fmt(comp)} تقع في نطاق ${band[0]}، ولا يتجاوز من يحصلون عليه ${band[1]} من مرشحي جهتك.`);
+
+    // gates
+    const blockers = [];
+    const wait = s.penalty, remain = Math.max(0, wait - s.since);
+    if (s.barrier) blockers.push(L('You are suspended, in custody or under investigation. Promotion is on hold until this ends.','أنت موقوف أو محبوس أو قيد التحقيق. الترقية موقوفة حتى انتهاء ذلك.'));
+    if (remain > 0) blockers.push(L(`Your salary-deduction penalty carries a ${wait}-month wait. ${months(remain)} left.`, `جزاء الخصم من الراتب يتطلب انتظار ${months(wait)}. المتبقي: ${months(remain)}.`));
+    if (s.ceiling) blockers.push(L("You are at the end of your job's career scale. Promotion can't go past it.",'بلغت نهاية التدرج الوظيفي لوظيفتك، ولا تتجاوزه الترقية.'));
+    if (s.reps[0] < 55) blockers.push(L('Your latest Ejada rating is Weak, which bars promotion.','تقديرك الأخير في إجادة "ضعيف"، وهو مانع من الترقية.'));
+    const timeGap = s.years < 3 ? Math.ceil((3 - s.years) * 12) : 0;
+    const timeLine = L(`${months(timeGap)} more in grade needed (3 years minimum).`, `تحتاج ${months(timeGap)} إضافية في الدرجة (الحد الأدنى 3 سنوات).`);
+
+    const tracks = [];
+    const na = {status:'na', label:L('Not covered','غير مشمول'), lines:[L('The new system covers permanent civil posts only.','المنظومة تشمل الوظائف المدنية الدائمة فقط.')]};
+    // fast
+    if (!s.permanent) tracks.push({name:L('Fast track','المسار السريع'), ...na});
+    else if (blockers.length) tracks.push({name:L('Fast track','المسار السريع'), status:'blocked', label:L('Blocked','ممنوع حالياً'), lines:blockers});
+    else {
+      const iss = [];
+      if (timeGap) iss.push(timeLine);
+      if (exc < 3) iss.push(L(`You have ${exc} of 3 Excellent ratings (90%+).`, `لديك ${exc} من 3 تقديرات "ممتاز" (90% فأكثر).`));
+      tracks.push({name:L('Fast track','المسار السريع'), status: iss.length ? 'notyet' : 'eligible', label: iss.length ? L('Not yet','ليس بعد') : L('Eligible','مؤهل'),
+        lines: iss.length ? iss : [L('You meet both conditions. This track is funded first.','تستوفي الشرطين، وهذا المسار يُموَّل أولاً.')]});
+    }
+    // flexible
+    if (!s.permanent) tracks.push({name:L('Flexible track','المسار المرن'), ...na});
+    else if (blockers.length) tracks.push({name:L('Flexible track','المسار المرن'), status:'blocked', label:L('Blocked','ممنوع حالياً'), lines:blockers});
+    else {
+      const iss = [];
+      if (timeGap) iss.push(timeLine);
+      if (goodPlus < 3) iss.push(L(`You have ${goodPlus} of 3 reports rated Good (70%+) or higher.`, `لديك ${goodPlus} من 3 تقارير بتقدير "جيد" (70%) فأعلى.`));
+      tracks.push({name:L('Flexible track','المسار المرن'), status: iss.length ? 'notyet' : 'eligible', label: iss.length ? L('Not yet','ليس بعد') : L('Eligible','مؤهل'),
+        lines: iss.length ? iss : [L(`You compete with an estimated ${fmt(total)} / 100. Promotion goes in rank order within your unit's budget.`, `تنافس بدرجة تقديرية ${fmt(total)} من 100. تتم الترقية حسب الترتيب وفي حدود ميزانية جهتك.`)]});
+    }
+    // special
+    if (!s.permanent) tracks.push({name:L('Special track','المسار الخاص'), ...na});
+    else if (!s.critical) tracks.push({name:L('Special track','المسار الخاص'), status:'na', label:L('Not applicable','لا ينطبق'), lines:[L('Only for roles that need rare or critical expertise.','للوظائف التي تتطلب خبرات نادرة أو حرجة فقط.')]});
+    else if (blockers.length) tracks.push({name:L('Special track','المسار الخاص'), status:'blocked', label:L('Blocked','ممنوع حالياً'), lines:blockers});
+    else if (timeGap) tracks.push({name:L('Special track','المسار الخاص'), status:'notyet', label:L('Not yet','ليس بعد'), lines:[timeLine]});
+    else tracks.push({name:L('Special track','المسار الخاص'), status:'possible', label:L('Possible','ممكن'), lines:[L('Your unit head can nominate you. This track is capped at 1% of the budget.','يمكن لرئيس الوحدة ترشيحك. هذا المسار لا يتجاوز 1% من الميزانية.')]});
+
+    $('tracksOut').innerHTML = tracks.map(t => `<div class="tr"><div class="tr-head"><h3>${t.name}</h3><span class="pill s-${t.status}">${t.label}</span></div><ul>${t.lines.map(l => `<li>${l}</li>`).join('')}</ul></div>`).join('');
+
+    // verdict + round
+    const fast = tracks[0].status, flex = tracks[1].status, spec = tracks[2].status;
+    let v;
+    if (!s.permanent) v = L("The new system doesn't cover your post.",'المنظومة الجديدة لا تشمل وظيفتك.');
+    else if (fast === 'eligible') v = L('You qualify for the fast track.','أنت مؤهل للمسار السريع.');
+    else if (flex === 'eligible') v = L('You qualify for the flexible track. Your rank decides.','أنت مؤهل للمسار المرن، وترتيبك هو الحاسم.');
+    else if (spec === 'possible') v = L('The special track is open to you.','المسار الخاص متاح لك.');
+    else if (blockers.length) v = L('Something is blocking promotion right now.','يوجد مانع من الترقية حالياً.');
+    else v = L("Not eligible yet. Here's what's missing.",'لست مؤهلاً بعد. إليك ما ينقصك.');
+    $('verdict').textContent = v;
+
+    const today = new Date(); today.setHours(0,0,0,0);
+    const next = roundOnOrAfter(new Date(today.getTime() + 86400000));
+    const days = Math.round((next - today) / 86400000);
+    let roundHtml = `<span>${L('Next promotion date','موعد الترقية القادم')}: <b>${dateFmt(next)}</b></span><span>${L(`in ${days} days`, `بعد ${days} يوماً`)}</span>`;
+    const hard = s.barrier || s.ceiling || s.reps[0] < 55 || !s.permanent;
+    const lag = Math.max(timeGap, remain);
+    if (!hard && lag > 0){
+      const earliest = roundOnOrAfter(addMonths(today, lag));
+      roundHtml += `<span>${L('Earliest round you could make','أقرب جولة يمكنك دخولها')}: <b>${dateFmt(earliest)}</b></span>`;
+    }
+    $('round').innerHTML = roundHtml;
+
+    // next moves
+    const m = [];
+    if (!s.permanent){
+      m.push(L("Ask HR which promotion rules apply to your contract or special regime.",'اسأل الموارد البشرية عن قواعد الترقية المطبقة على عقدك أو نظامك الخاص.'));
+    } else {
+      if (s.reps[0] < 55) m.push(L('Agree a performance improvement plan with your manager now. Your next rating needs to clear 55%.','اتفق مع مسؤولك على خطة لتحسين الأداء الآن. يجب أن يتجاوز تقييمك القادم 55%.'));
+      if (s.barrier) m.push(L('Follow up on your case with HR. Promotion resumes once it is closed.','تابع قضيتك مع الموارد البشرية. تُستأنف الترقية بعد إغلاقها.'));
+      if (remain > 0) m.push(L(`Avoid any new penalty. Your waiting period ends in ${months(remain)}.`, `تجنب أي جزاء جديد. تنتهي فترة انتظارك بعد ${months(remain)}.`));
+      if (s.ceiling) m.push(L('Ask HR about moving to a post with a longer career scale.','اسأل الموارد البشرية عن الانتقال إلى وظيفة ذات تدرج وظيفي أطول.'));
+      if (timeGap && !hard) m.push(L(`Keep your ratings high while you complete 3 years in grade, around ${dateFmt(addMonths(today, timeGap))}.`, `حافظ على تقييماتك مرتفعة حتى تكمل 3 سنوات في الدرجة، في حدود ${dateFmt(addMonths(today, timeGap))}.`));
+      if (fast === 'eligible') m.push(L(`Confirm with HR that your file is complete before ${dateFmt(next)}.`, `تأكد مع الموارد البشرية من اكتمال ملفك قبل ${dateFmt(next)}.`));
+      else if (!s.ceiling && exc < 3 && s.reps[0] >= 55) m.push(L(`Aim for 90%+ in Ejada. ${3 - exc === 1 ? 'One more Excellent rating' : (3 - exc) + ' more Excellent ratings'} would open the fast track.`, `استهدف 90% فأكثر في إجادة. ${3 - exc === 1 ? 'تقدير "ممتاز" واحد إضافي' : (3 - exc) + ' تقديرات "ممتاز" إضافية'} تفتح لك المسار السريع.`));
+      if (goodPlus < 3 && s.reps[0] >= 55) m.push(L('Lift each report to at least 70% (Good) to enter the flexible track.','ارفع كل تقرير إلى 70% (جيد) على الأقل لدخول المسار المرن.'));
+      if (fast !== 'eligible' && comp < 20 && !hard) m.push(L("Ask your manager which higher-grade duties and training would raise your readiness and skills scores.",'اسأل مسؤولك عن مهام الدرجة الأعلى والتدريب الذي يرفع درجتي الاستعداد وتطور المهارات.'));
+      if (fast !== 'eligible' && avg < 96 && !hard && goodPlus >= 3) m.push(L(`Every 4 points on your Ejada average adds 3 to your score. Your top-three average is ${fmt(avg)}%.`, `كل 4 نقاط في متوسط إجادة تضيف 3 درجات إلى مجموعك. متوسط أعلى ثلاثة تقارير لديك ${fmt(avg)}%.`));
+    }
+    m.push(L("If you meet the conditions and aren't promoted, file a grievance with your unit's committee.",'إذا استوفيت الشروط ولم تُرقَّ، قدّم تظلماً إلى لجنة جهتك.'));
+    $('moves').innerHTML = m.slice(0,5).map(x => `<li>${x}</li>`).join('');
+  }
+
+  function setCount(n){
+    count = n;
+    document.querySelectorAll('.seg button').forEach(b => b.setAttribute('aria-pressed', String(+b.dataset.count === n)));
+    document.querySelectorAll('.rep').forEach(r => r.hidden = +r.dataset.i >= n);
+    render();
+  }
+  function applySample(){
+    $('permanent').checked = SAMPLE.permanent; $('years').value = SAMPLE.years; $('ceiling').checked = SAMPLE.ceiling; $('critical').checked = SAMPLE.critical;
+    SAMPLE.reps.forEach((v,i) => $('rep'+i).value = v);
+    $('ready').value = SAMPLE.ready; $('skills').value = SAMPLE.skills; $('barrier').checked = SAMPLE.barrier; $('penalty').value = SAMPLE.penalty; $('since').value = SAMPLE.since;
+    setCount(SAMPLE.count);
+  }
+  function setLang(l){
+    lang = l;
+    const r = document.documentElement;
+    if (l === 'ar'){ r.dataset.lang = 'ar'; r.dir = 'rtl'; r.lang = 'ar'; } else { delete r.dataset.lang; r.dir = 'ltr'; r.lang = 'en'; }
+    $('langBtn').textContent = l === 'ar' ? 'English' : 'عربي';
+    try { localStorage.setItem('pp-lang', l); } catch(e) {}
+    document.title = l === 'ar' ? 'دليل الترقية | Promotion Pathfinder' : 'Promotion Pathfinder | دليل الترقية';
+    syncThemeLabel();
+    render();
+  }
+  function syncThemeLabel(){
+    const dark = document.documentElement.dataset.theme === 'dark';
+    $('themeBtn').setAttribute('aria-label', dark ? L('Switch to light mode','الوضع الفاتح') : L('Switch to dark mode','الوضع الداكن'));
+    $('themeBtn').setAttribute('aria-pressed', String(dark));
+  }
+  function toggleTheme(){
+    const r = document.documentElement;
+    const t = r.dataset.theme === 'dark' ? 'light' : 'dark';
+    r.dataset.theme = t;
+    try { localStorage.setItem('pp-theme', t); } catch(e) {}
+    syncThemeLabel();
+  }
+
+  $('form').addEventListener('input', render);
+  $('form').addEventListener('change', render);
+  $('form').addEventListener('submit', e => e.preventDefault());
+  document.querySelectorAll('.seg button').forEach(b => b.addEventListener('click', () => setCount(+b.dataset.count)));
+  $('resetBtn').addEventListener('click', applySample);
+  $('themeBtn').addEventListener('click', toggleTheme);
+  $('langBtn').addEventListener('click', () => setLang(lang === 'ar' ? 'en' : 'ar'));
+  setLang(lang);
+})();
+</script>
+</body>
+</html>
